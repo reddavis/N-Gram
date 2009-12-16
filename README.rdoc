@@ -1,18 +1,50 @@
-= n_gram
+= NGram
 
-Description goes here.
+A simple NGram generator - http://en.wikipedia.org/wiki/N-gram.
 
-== Note on Patches/Pull Requests
- 
-* Fork the project.
-* Make your feature addition or bug fix.
-* Add tests for it. This is important so I don't break it in a
-  future version unintentionally.
-* Commit, do not mess with rakefile, version, or history.
-  (if you want to have your own version, that is fine but
-   bump version in a commit by itself I can ignore when I pull)
-* Send me a pull request. Bonus points for topic branches.
+== Install
+
+  gem sources -a http://gemcutter.org
+  sudo gem install n_gram
+  
+== How To Use
+
+A single N-Gram
+
+  require 'rubygems'
+  require 'n_gram'
+  
+  data = ['here is some text', 'here is more text']
+  
+  n_gram = NGram.new(data, :n => 2)
+  
+  # To see the N-Gram of the collection
+  ngram.ngrams_of_all_data
+    #=> {2 => {'here is' => 2 etc...}}
+    
+  # To see the N-Grams of individual inputs
+  # If we want the N-Gram of data[0]
+  ngram.ngrams_of_inputs[0]
+    #=> {2 => {'here is' => 1 etc...}}
+    
+Multiple N-Grams
+
+  require 'rubygems'
+  require 'n_gram'
+
+  data = ['here is some text', 'here is more text']
+
+  n_gram = NGram.new(data, :n => [2,3])
+
+  # To see the N-Gram of the collection
+  ngram.ngrams_of_all_data
+    #=> {2 => {'here is' => 2 etc...}, 3 => {'here is some' => 1 etc...}}
+  
+  # To see the N-Grams of individual inputs
+  # If we want the N-Gram of data[0]
+  ngram.ngrams_of_inputs[0]
+    #=> {2 => {'here is' => 1 etc...}, 3 => {'here is some' => 1 etc...}}
 
 == Copyright
 
-Copyright (c) 2009 reddavis. See LICENSE for details.
+Copyright (c) 2009 Red Davis. See LICENSE for details.
