@@ -5,8 +5,8 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "n_gram"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{A simple NGram generator}
+    gem.description = %Q{A simple NGram generator}
     gem.email = "reddavis@gmail.com"
     gem.homepage = "http://github.com/reddavis/n_gram"
     gem.authors = ["reddavis"]
