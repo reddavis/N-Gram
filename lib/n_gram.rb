@@ -27,7 +27,7 @@ class NGram
       
       words = string.split(' ')
       
-      (words.size - 1).times do |index|
+      (words.size).times do |index|
         @ns.each do |n|
           bucket[n][words[index,n].join(' ')] += 1
           @all_ngram[n][words[index,n].join(' ')] += 1
