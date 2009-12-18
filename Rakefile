@@ -8,7 +8,7 @@ begin
     gem.summary = %Q{A simple NGram generator}
     gem.description = %Q{A simple NGram generator}
     gem.email = "reddavis@gmail.com"
-    gem.homepage = "http://github.com/reddavis/n_gram"
+    gem.homepage = "http://github.com/reddavis/N-Gram"
     gem.authors = ["reddavis"]
     gem.add_development_dependency "rspec", ">= 1.2.9"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
