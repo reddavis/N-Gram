@@ -29,6 +29,8 @@ class NGram
       
       (words.size).times do |index|
         @ns.each do |n|
+          # Next if we've ran out of words
+          next if (index + n) > words.size
           bucket[n][words[index,n].join(' ')] += 1
           @all_ngram[n][words[index,n].join(' ')] += 1
         end
