@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{n_gram}
-  s.version = "0.0.0"
+  s.version = "0.0.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["reddavis"]
-  s.date = %q{2009-12-18}
+  s.date = %q{2010-01-06}
   s.description = %q{A simple NGram generator}
   s.email = %q{reddavis@gmail.com}
   s.extra_rdoc_files = [
