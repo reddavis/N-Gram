@@ -19,12 +19,12 @@ A single N-Gram
   n_gram = NGram.new(data, :n => 2)
   
   # To see the N-Gram of the collection
-  ngram.ngrams_of_all_data
+  n_gram.ngrams_of_all_data
     #=> {2 => {'here is' => 2 etc...}}
     
   # To see the N-Grams of individual inputs
   # If we want the N-Gram of data[0]
-  ngram.ngrams_of_inputs[0]
+  n_gram.ngrams_of_inputs[0]
     #=> {2 => {'here is' => 1 etc...}}
     
 Multiple N-Grams
@@ -37,12 +37,12 @@ Multiple N-Grams
   n_gram = NGram.new(data, :n => [2,3])
 
   # To see the N-Gram of the collection
-  ngram.ngrams_of_all_data
+  n_gram.ngrams_of_all_data
     #=> {2 => {'here is' => 2 etc...}, 3 => {'here is some' => 1 etc...}}
   
   # To see the N-Grams of individual inputs
   # If we want the N-Gram of data[0]
-  ngram.ngrams_of_inputs[0]
+  n_gram.ngrams_of_inputs[0]
     #=> {2 => {'here is' => 1 etc...}, 3 => {'here is some' => 1 etc...}}
 
 == Copyright
